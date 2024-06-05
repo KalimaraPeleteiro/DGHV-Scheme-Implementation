@@ -1,0 +1,3 @@
+Tau ou T:   Tamanho da lista a ser gerada pelo gerador de números aleatórios.
+Gamma:      Quantidade de bits que o número aleatório gerado deve ter.
+Eta ou n:   O tamanho em Bits do número primo gerado em KeyGen.
