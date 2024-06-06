@@ -1,3 +1,7 @@
-Tau ou T:   Tamanho da lista a ser gerada pelo gerador de números aleatórios.
-Gamma:      Quantidade de bits que o número aleatório gerado deve ter.
-Eta ou n:   O tamanho em Bits do número primo gerado em KeyGen.
+Tau ou T:       Tamanho da lista a ser gerada pelo gerador de números aleatórios.
+Gamma:          Quantidade de bits que o número aleatório gerado deve ter.
+Eta ou n:       O tamanho em Bits do número primo gerado em KeyGen.
+Lambda e Zeta:  Utilizados para a criação da lista de ruído Delta.
+Delta:          Lista de ruído adicionada para prevenir ataques de análise lateral e outros tipos.
+q0 e x0:        Usados para criar a matriz de base que define o reticulado.
+Rho e Lambda:   Definem a amplitude do ruído adicionado. Quanto maior, mais seguro.

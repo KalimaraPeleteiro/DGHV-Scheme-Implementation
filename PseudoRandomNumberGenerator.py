@@ -17,7 +17,7 @@ class PseudoRandomNumberGenerator:
     # list_size -> Usado para definir o tamanho da lista gerada
 
     def __init__(self, seed, element_size, list_size) -> None:
-        self.seed, self.gam, self.n = seed, element_size, list_size
+        self.seed, self.element_size, self.list_size = seed, element_size, list_size
 
         # Fazer range sobre um inteiro gera uma sequência do tamanho do valor dele
         self.list = [None for i in range(self.list_size)]
