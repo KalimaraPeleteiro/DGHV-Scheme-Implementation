@@ -5,3 +5,4 @@ Lambda e Zeta:  Utilizados para a criação da lista de ruído Delta.
 Delta:          Lista de ruído adicionada para prevenir ataques de análise lateral e outros tipos.
 q0 e x0:        Usados para criar a matriz de base que define o reticulado.
 Rho e Lambda:   Definem a amplitude do ruído adicionado. Quanto maior, mais seguro.
+Theta:          Define o tamanho do Vetor S
