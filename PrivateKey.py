@@ -144,3 +144,6 @@ class PrivateKey:
                           "parameters": self.parameters}
         
         self.SecretKey = self.s  # Chave Privada
+    
+    def returnKeys(self):
+        return self.SecretKey, self.PublicKey
