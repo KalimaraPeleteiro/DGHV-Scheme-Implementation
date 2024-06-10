@@ -6,11 +6,17 @@ Replicando Implementação de Bilar(2014)
 """
 
 from PseudoRandomNumberGenerator import PseudoRandomNumberGenerator
-from gmpy2 import mpz, get_context
-from utils.math import modNear
+from gmpy2 import mpz
 
 import gmpy2
 import random
+
+def quocientNear(a, b):
+    return (2 * a + b) // (2 * b)
+
+def modNear(a, b):
+    return a - b * quocientNear(a, b)
+
 
 def encrypt(publickKey, message):
     assert message == 0 or message == 1
