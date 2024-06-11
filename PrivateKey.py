@@ -70,6 +70,7 @@ class PrivateKey:
 
         # Criação do Vetor no final irá gerar um Vetor S
         # Vetor S terá Theta Elementos, com Theta/15 elementos tendo valor 1 e todos os outros com valor 0.
+        # Peso de Hamming: Números de elementos diferente de 0 no vetor. Nesse caso, sempre será Theta/15.
         size = int(parameters["theta"]/15)
         self.s = [1] + [0 for i in range(size - 1)]
         for i in range(15 - 1):
