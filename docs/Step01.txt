@@ -1,0 +1,16 @@
+O tempo de escolha do número primo varia de execução para execução, além do parâmetro eta.
+
+Em 10 Rodadas com Large, tivemos:
+
+Um menor resutado de: 0.20 Segundos
+O maior de: 6.28 Segundos
+Média de: 2.15 Segundos
+
+O __pycache__ pode estar envolvido no ganho de performance. Os números primos gerados são sempre do
+mesmo tamanho por garantia do código.
+
+
+Quanto o Vetor S, mesmo no caso mais extremo, o tempo de criação não ultrapassa os 0.1 segundos.
+
+
+STEP 01 é possível.
