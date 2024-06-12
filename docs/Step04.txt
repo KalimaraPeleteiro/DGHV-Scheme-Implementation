@@ -1,0 +1,2 @@
+LARGE - 55 Segundos 
+TOY - 0.02 Segundos

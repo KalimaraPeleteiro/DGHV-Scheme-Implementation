@@ -1,0 +1,7 @@
+O processo de geração da classe Pseudoaleatória é quase instantâneo como esperado.
+
+A geração da Lista Delta que é demorada. Talvez pensar em alguma solução no algoritmo para reduzir
+o tempo seja necessário.
+
+LARGE - 134 Segundos
+TOY - 0.02 Segundos

@@ -1,0 +1,4 @@
+O tempo de escolha de valores como q0 e x0 são mínimos, mesmo nos parâmetros mais largos.
+Valores não passam de 0.1 segundos.
+
+O que gera atraso é no print de um número tão grande.

@@ -1,0 +1,7 @@
+Muito similar ao Step03
+
+O modo de criação da lista é mais custoso, entretanto. Assim como em Delta, talvez pensar em como reduzir
+o custo.
+
+LARGE - Impossível de gerar.
+TOY - 0.06 Segundos

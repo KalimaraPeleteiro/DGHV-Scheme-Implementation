@@ -7,7 +7,7 @@ import random
 import time
 
 counter1 = time.time()
-q0 = random.randint(0, mpz(2) ** TOY["gam"]/PRIME_NUMBER_TOY)
+q0 = random.randint(0, mpz(2) ** LARGE["gam"]/PRIME_NUMBER_LARGE)
 counter1end = time.time()
 
 print(f"q0: {q0}")
@@ -15,7 +15,7 @@ print("")
 print(f"Tempo de Escolha de q0: {counter1end - counter1:.2f} segundos.")
 
 counter2 = time.time()
-x0 = q0 * PRIME_NUMBER_TOY
+x0 = q0 * PRIME_NUMBER_LARGE
 counter2end = time.time()
 print("")
 print("")
