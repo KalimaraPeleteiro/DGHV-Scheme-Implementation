@@ -4,3 +4,21 @@ Melhor Resultado: 0.05 Segundos
 Pior Resultado: 0.20 Segundos
 
 Média: 0.98 Segundos (Ganho de performance de 9.26% na média)
+
+
+
+10 Execuções (SMALL) - Lambda 52
+
+Melhor Resultado: 0.91 Segundos
+Pior Resultado: 1.33 Segundos
+
+Média: 1.08 Segundos (Ganho de performance de 26.14% na média)
+
+
+
+10 Execuções (MEDIUM) - Lambda 62
+
+Melhor Resultado: 18.45 Segundos
+Pior Resultado: 20.81 Segundos
+
+Média: 19.299 Segundos (Ganho de performance de 34.3% na média)

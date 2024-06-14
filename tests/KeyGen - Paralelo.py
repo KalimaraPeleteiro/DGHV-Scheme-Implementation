@@ -21,28 +21,28 @@ def random_list(size):
 
 # Passo 02 - q0 e x0
 def step_02(prime_number):
-    q0 = random.randint(0, mpz(2) ** TOY["gam"]/prime_number)
+    q0 = random.randint(0, mpz(2) ** MEDIUM["gam"]/prime_number)
     x0 = q0 * prime_number
 
 
 # Passo 03 - Lista Delta
 def step_03(prime_number):
     value = uuid.uuid4()
-    f1 = PseudoRandomNumberGenerator(seed = int(value.int), element_size=TOY["gam"], list_size=TOY["tau"])
+    f1 = PseudoRandomNumberGenerator(seed = int(value.int), element_size=MEDIUM["gam"], list_size=MEDIUM["tau"])
 
     delta = [(chi % prime_number) + prime_number -
-                        random.randint(0, mpz(2) ** (TOY["lam"]) + 
-                                        TOY["eta"] * prime_number - 
-                                        random.randint(- (mpz(2) ** TOY["rho"]), 
-                                                        mpz(2)**TOY["rho"])) for chi in f1]
+                        random.randint(0, mpz(2) ** (MEDIUM["lam"]) + 
+                                        MEDIUM["eta"] * prime_number - 
+                                        random.randint(- (mpz(2) ** MEDIUM["rho"]), 
+                                                        mpz(2)**MEDIUM["rho"])) for chi in f1]
 
 
 # Passo 04 - Elemento ul
 def step_04(prime_number, s):
-    kappa = TOY["gam"] + TOY["eta"] + 2
+    kappa = MEDIUM["gam"] + MEDIUM["eta"] + 2
     value = uuid.uuid4()
     f2 = PseudoRandomNumberGenerator(seed = int(value.int), 
-                                    element_size=kappa, list_size=TOY["Theta"])
+                                    element_size=kappa, list_size=MEDIUM["Theta"])
     f2[0] = 0
 
     somatorio = 0
@@ -57,12 +57,12 @@ def step_04(prime_number, s):
 # Passo 05 - Lista DeltaPrime
 def step_05(prime_number, s):
     value = uuid.uuid4()
-    f3 = PseudoRandomNumberGenerator(seed = int(value.int), element_size=TOY["gam"], list_size=TOY["Theta"])
+    f3 = PseudoRandomNumberGenerator(seed = int(value.int), element_size=MEDIUM["gam"], list_size=MEDIUM["Theta"])
 
     deltaPrime = [chi % prime_number + 
-                            random.randint(0, mpz(2) ** (TOY["gam"] + 
-                                                            TOY["eta"]/prime_number)/prime_number) 
-                                                            * prime_number - 2 * random.randint(-mpz(2) ** TOY["rho"], mpz(2) ** TOY["rho"]) - si for chi, si in zip(f3, s)]
+                            random.randint(0, mpz(2) ** (MEDIUM["gam"] + 
+                                                            MEDIUM["eta"]/prime_number)/prime_number) 
+                                                            * prime_number - 2 * random.randint(-mpz(2) ** MEDIUM["rho"], mpz(2) ** MEDIUM["rho"]) - si for chi, si in zip(f3, s)]
 
 
 
@@ -78,15 +78,15 @@ if __name__ == '__main__':
 
     # Escolhendo Número Primo
     while True:
-        prime_number = next_prime(random.getrandbits(TOY["eta"]))
+        prime_number = next_prime(random.getrandbits(MEDIUM["eta"]))
 
-        if len(prime_number) == TOY["eta"]:
+        if len(prime_number) == MEDIUM["eta"]:
             counter1end = time.time()
             break
 
     # Criando Vetor S
-    assert TOY["Theta"] % 15 == 0
-    size = int(TOY["Theta"]/15)
+    assert MEDIUM["Theta"] % 15 == 0
+    size = int(MEDIUM["Theta"]/15)
     s = [1] + [0 for i in range(size - 1)]
 
     for i in range(15 - 1):
