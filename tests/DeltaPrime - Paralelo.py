@@ -36,13 +36,13 @@ def deltaPrime(prime_number, s):
 def computeDeltaPrimeValues(prime_number, chi, si):
     value1 = chi % prime_number
     value2 = random.randint(0, 2 ** (MEDIUM["gam"] + MEDIUM["eta"]/prime_number)/prime_number)
-    value3 = prime_number - 2 * random.randint(2 ** MEDIUM["rho"], 2 ** MEDIUM["rho"]) - si
+    value3 = prime_number - 2 * random.randint(-2 ** MEDIUM["rho"], 2 ** MEDIUM["rho"]) - si
 
     result = value1 + value2 * value3
     return result
 
 
-def deltaPrimeWithGenerator(prime_number, s):
+def deltaPrimeParallel(prime_number, s):
     counter = time.time()
     value = uuid.uuid4()
     f3 = PseudoRandomNumberGenerator(seed = int(value.int), element_size=MEDIUM["gam"], list_size=MEDIUM["Theta"])
@@ -77,5 +77,5 @@ if __name__ == '__main__':
     
     deltaPrime(prime_number, s)
 
-    deltaPrimeWithGenerator(prime_number, s)
+    deltaPrimeParallel(prime_number, s)
 

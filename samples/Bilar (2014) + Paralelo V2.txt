@@ -1,0 +1,8 @@
+10 Execuções (MEDIUM) - Lambda 62
+
+Melhor Resultado: 16.76 Segundos
+Pior Resultado: 19.06 Segundos
+
+Média: 17.634 Segundos 
+[Ganho de performance de 40.1% na média em relação a Bilar (2014)]
+[Ganho de performance de 8.63% na média em relação a deltaPrime sem Paralelismo]

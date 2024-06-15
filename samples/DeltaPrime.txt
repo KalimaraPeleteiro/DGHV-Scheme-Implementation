@@ -9,3 +9,5 @@ PARALELISMO
 Usar o multiprocessing para computar cada valor de deltaPrime individualmente na lista não trouxe
 melhora de performance, mesmo com parâmetros mais altos.
 
+Usar o joblib aumenta a performance de deltaPrime em parâmetro MEDIUM, mas requere retirar
+o mpz.
