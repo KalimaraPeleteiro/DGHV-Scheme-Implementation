@@ -27,7 +27,6 @@ def main():
         prime_number = next_prime(random.getrandbits(MEDIUM["eta"]))
 
         if len(prime_number) == MEDIUM["eta"]:
-            counter1end = time.time()
             break
 
     # Criando Vetor S

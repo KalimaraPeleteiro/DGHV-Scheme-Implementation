@@ -1,0 +1,11 @@
+GERADORES
+O uso de geradores não trouxe melhoria de performance em tempo.
+
+Apesar disto, resultados com o @Profile do memory_profile apontam para um ganho de performance no
+uso de memória.
+
+
+PARALELISMO
+Usar o multiprocessing para computar cada valor de deltaPrime individualmente na lista não trouxe
+melhora de performance, mesmo com parâmetros mais altos.
+
