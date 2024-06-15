@@ -16,12 +16,16 @@ Média: 1.463 Segundos
 
 
 
+
+
 10 Execuções (MEDIUM) - Lambda 62
 
 Melhor Resultado: 28.22 Segundos
 Pior Resultado: 31.12 Segundos
 
 Média: 29.386 Segundos
+
+
 
 
 
