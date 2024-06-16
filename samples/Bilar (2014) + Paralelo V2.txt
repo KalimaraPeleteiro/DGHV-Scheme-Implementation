@@ -6,3 +6,13 @@ Pior Resultado: 19.06 Segundos
 Média: 17.634 Segundos 
 [Ganho de performance de 40.1% na média em relação a Bilar (2014)]
 [Ganho de performance de 8.63% na média em relação a deltaPrime sem Paralelismo]
+
+
+
+10 Execução (LARGE) - LAMBDA 72
+
+Melhor Resultado: 213.25 Segundos
+Pior Resultado: 641.56 Segundos
+
+Média: 347.894 Segundos, ou  05 Minutos e 47 Segundos. 
+[Ganho de performance de 13.24% na média em relação a deltaPrime sem Paralelismo]

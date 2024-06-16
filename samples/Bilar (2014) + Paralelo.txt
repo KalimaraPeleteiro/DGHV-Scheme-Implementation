@@ -22,3 +22,12 @@ Melhor Resultado: 18.45 Segundos
 Pior Resultado: 20.81 Segundos
 
 Média: 19.299 Segundos (Ganho de performance de 34.3% na média)
+
+
+
+10 Execução (LARGE) - LAMBDA 72
+
+Melhor Resultado: 265.84 Segundos
+Pior Resultado: 769.83 Segundos
+
+Média: 400.983 Segundos, ou  06 Minutos e 40 Segundos.
