@@ -3,7 +3,7 @@
 Melhor Resultado: 0.05 Segundos
 Pior Resultado: 0.20 Segundos
 
-Média: 0.98 Segundos (Ganho de performance de 9.26% na média)
+Média: 0.098 Segundos (Ganho de performance de 9.26% na média)
 
 
 

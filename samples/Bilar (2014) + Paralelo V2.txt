@@ -1,3 +1,21 @@
+10 Execuções (TOY) - Lambda 42
+
+Melhor Resultado: 0.41 Segundos
+Pior Resultado: 0.77 Segundos
+
+Média: 0.499 Segundos (Aumento de 409% na média)
+
+
+
+10 Execuções (SMALL) - Lambda 52
+
+Melhor Resultado: 1.31 Segundos
+Pior Resultado: 2.34 Segundos
+
+Média: 1.621 Segundos (Aumento de 50.09% na média)
+
+
+
 10 Execuções (MEDIUM) - Lambda 62
 
 Melhor Resultado: 16.76 Segundos
