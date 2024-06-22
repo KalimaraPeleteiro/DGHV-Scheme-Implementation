@@ -34,7 +34,7 @@ def step_03(prime_number):
     delta = [(chi % prime_number) + prime_number -
                         random.randint(0, mpz(2) ** (SMALL["lam"]) + 
                                         SMALL["eta"] * prime_number - 
-                                        random.randint(- (mpz(2) ** SMALL["rho"]), 
+                                           random.randint(- (mpz(2) ** SMALL["rho"]), 
                                                         mpz(2)**SMALL["rho"])) for chi in f1]
 
 
