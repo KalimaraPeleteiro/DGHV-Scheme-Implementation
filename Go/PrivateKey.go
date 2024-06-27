@@ -39,9 +39,8 @@ func (pk PrivateKey) KeyGen() {
 		}
 	}
 
-	quotient := new(big.Int).Div(pk.gamma, primeNumber)
-
-	upperLimit := new(big.Int).Exp(big.NewInt(2), quotient, nil)
+	exponationValue := new(big.Int).Exp(big.NewInt(2), pk.gamma, nil)
+	upperLimit := new(big.Int).Div(exponationValue, primeNumber)
 
 	q0, err := rand.Int(rand.Reader, upperLimit)
 	if err != nil {
@@ -51,4 +50,23 @@ func (pk PrivateKey) KeyGen() {
 	x0 := new(big.Int).Mul(q0, primeNumber)
 
 	fmt.Println(x0)
+}
+
+func main() {
+
+	// Parâmetro de Chave Toy
+	key := PrivateKey{
+		securityType:   "Toy",
+		lambda:         42,
+		rho:            26,
+		eta:            988,
+		gamma:          big.NewInt(147456),
+		theta:          150,
+		publickKeySize: 0.076519,
+		securityLevel:  42,
+		alpha:          936,
+		tau:            158,
+	}
+
+	key.KeyGen()
 }
