@@ -5,8 +5,47 @@ import (
 	"crypto/rand"
 	"fmt"
 	"math/big"
+	"time"
 )
 
+// GERADOR DE NÚMEROS PSEUDOALEATÓRIO (Necessário para Delta, DeltaPrime e Ul)
+type PseudoRandomNumberGenerator struct {
+	seed        int64
+	elementSize int
+	listSize    int
+	list        []*big.Int
+}
+
+// Construtor em forma de função (já que não tem classes em Go)
+func NewGenerator(seed int64, elementSize, listSize int) *PseudoRandomNumberGenerator {
+	return &PseudoRandomNumberGenerator{
+		seed:        seed,
+		elementSize: elementSize,
+		listSize:    listSize,
+		list:        make([]*big.Int, listSize),
+	}
+}
+
+// Retorna um novo valor.
+func (generator PseudoRandomNumberGenerator) NewValue() {
+	for i := 0; i < generator.listSize; i++ {
+		if generator.list[i] == nil {
+			randomNumber, err := rand.Int(rand.Reader, big.NewInt(1<<uint(generator.elementSize)))
+
+			if err != nil {
+				panic(err)
+			}
+
+			generator.list[i] = randomNumber
+		}
+	}
+}
+
+func (generator PseudoRandomNumberGenerator) GetValue(index int) *big.Int {
+	return generator.list[index]
+}
+
+// ESTRUTURA DE CHAVE PRIVADA (Esquema DGHV)
 type PrivateKey struct {
 	securityType   string
 	lambda         int
@@ -21,6 +60,8 @@ type PrivateKey struct {
 }
 
 func (pk PrivateKey) KeyGen() {
+
+	startTimer := time.Now()
 
 	var primeNumber *big.Int
 	var err error
@@ -50,6 +91,10 @@ func (pk PrivateKey) KeyGen() {
 	x0 := new(big.Int).Mul(q0, primeNumber)
 
 	fmt.Println(x0)
+
+	timePassed := time.Since(startTimer)
+
+	fmt.Printf("Tempo de Execução: %s\n", timePassed)
 }
 
 func main() {
